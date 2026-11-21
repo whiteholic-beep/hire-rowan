@@ -1,0 +1,9 @@
+{
+  "network": "bscTestnet",
+  "chainId": 97,
+  "deployer": "0xBED2e63e427f1A5557A9A9d4Dd2FA98C9CE97E89",
+  "paymentToken": "0x0DAed7A5Cb2DA406D184E735e92f59d49982852E",
+  "agentIdRegistry": "0xDbc93B23B2A6BF7923C887924417Cd471B28ba5c",
+  "escrow": "0x9A79fE3465F13adB762D5f7526BeCbd8624E6632",
+  "deployedAt": "2026-11-21T01:32:00Z"
+}

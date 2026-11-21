@@ -1,0 +1,21 @@
+{
+  "name": "agent-id-hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.9",
+    "@nomicfoundation/hardhat-ethers": "^3.0.9",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.4",
+    "@openzeppelin/contracts": "^5.6.1",
+    "chai": "^4.5.0",
+    "ethers": "^6.17.0",
+    "hardhat": "^2.26.3"
+  }
+}

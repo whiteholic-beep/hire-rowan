@@ -1,0 +1,7 @@
+.deployer-testnet.json
+.env
+node_modules/
+artifacts/
+cache/
+coverage/
+typechain-types/

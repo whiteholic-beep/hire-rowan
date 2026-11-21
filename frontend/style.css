@@ -1,0 +1,276 @@
+/* Hire Rowan — dark, clean, mobile-first styles. System fonts only. */
+
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface-2: #1c2330;
+  --border: #2a3342;
+  --text: #e6edf3;
+  --muted: #8b98a9;
+  --accent: #58a6ff;
+  --accent-hover: #79b8ff;
+  --success: #3fb950;
+  --warning: #d29922;
+  --danger: #f85149;
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; word-break: break-all; }
+.muted { color: var(--muted); }
+.small { font-size: 0.85rem; }
+.hidden { display: none !important; }
+.grow { flex: 1; min-width: 0; }
+
+/* Header */
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark {
+  width: 44px; height: 44px; flex: 0 0 44px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #0d1117;
+  font-size: 24px; font-weight: 800;
+}
+.brand h1 { margin: 0; font-size: 1.5rem; line-height: 1.2; }
+.tagline { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.wallet-area { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.wallet-info { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; justify-content: flex-end; }
+
+/* Cards & sections */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.card h2 { margin: 0 0 12px; font-size: 1.2rem; }
+.card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+
+/* Daily check-in — the most prominent action on the page */
+.checkin-card {
+  border: 2px solid var(--accent);
+  background: linear-gradient(180deg, #182234, var(--surface));
+}
+.checkin-copy { margin: 0 0 16px; }
+.checkin-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.checkin-stat {
+  flex: 1;
+  min-width: 140px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-align: center;
+}
+.checkin-stat-value { display: block; font-size: 1.35rem; font-weight: 800; }
+.checkin-stat-label { display: block; color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+.btn-large { padding: 12px 28px; font-size: 1.05rem; }
+#checkInNote { font-size: 0.9rem; }
+
+/* Risk banner */
+.risk-banner {
+  background: #2a1f0d;
+  border: 1px solid var(--warning);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+.risk-banner strong { color: #f0b429; }
+.risk-banner p { margin: 8px 0 0; font-size: 0.95rem; }
+
+/* Key/value rows */
+.kv { margin: 0; }
+.kv > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+.kv > div:last-child { border-bottom: none; }
+.kv dt { color: var(--muted); min-width: 150px; }
+.kv dd { margin: 0; }
+
+/* Steps */
+.steps { margin: 0; padding-left: 22px; }
+.steps li { margin-bottom: 10px; }
+
+/* Forms */
+label { display: block; margin-bottom: 14px; font-weight: 600; font-size: 0.95rem; }
+label input, label textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font: inherit;
+  font-weight: 400;
+}
+label input:focus, label textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+label textarea { resize: vertical; }
+.field-row { display: flex; flex-wrap: wrap; gap: 0 16px; align-items: flex-end; }
+.field-row > label { flex: 1; min-width: 200px; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.hash-box {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+/* Buttons */
+.btn {
+  font: inherit;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--accent); color: #0d1117; }
+.btn-primary:hover:not(:disabled) { background: var(--accent-hover); }
+.btn-secondary { background: var(--surface-2); color: var(--text); border-color: var(--border); }
+.btn-secondary:hover:not(:disabled) { border-color: var(--accent); }
+.btn-ghost { background: transparent; color: var(--muted); border-color: var(--border); }
+.btn-ghost:hover:not(:disabled) { color: var(--text); border-color: var(--muted); }
+.btn-danger { background: transparent; color: var(--danger); border-color: var(--danger); }
+.btn-small { padding: 6px 12px; font-size: 0.9rem; }
+
+/* Pills */
+.pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+.pill.ok { color: var(--success); border-color: var(--success); }
+.pill.warn { color: var(--warning); border-color: var(--warning); }
+.pill.bad { color: var(--danger); border-color: var(--danger); }
+
+/* Status box */
+.status-box {
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.status-box.info { border-color: var(--accent); }
+.status-box.success { border-color: var(--success); }
+.status-box.error { border-color: var(--danger); }
+.status-box.pending { border-color: var(--warning); }
+
+/* Task board */
+.board-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.board-header h2 { margin: 0; }
+.task-board { display: grid; gap: 14px; margin-top: 14px; }
+.task-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+.task-card .task-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.task-card .task-id { font-weight: 700; font-size: 1.05rem; }
+.status-pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.status-Open { color: var(--accent); border-color: var(--accent); }
+.status-Claimed { color: #bc8cff; border-color: #bc8cff; }
+.status-Delivered { color: var(--warning); border-color: var(--warning); }
+.status-Completed { color: var(--success); border-color: var(--success); }
+.status-Cancelled, .status-Refunded { color: var(--muted); }
+.task-card .kv { font-size: 0.93rem; }
+.task-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.task-actions .btn { padding: 8px 14px; font-size: 0.92rem; }
+.delivery-form { margin-top: 12px; display: grid; gap: 8px; }
+.delivery-form input {
+  width: 100%;
+  padding: 9px 11px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font: inherit;
+}
+.action-reason { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+
+/* Footer */
+.site-footer { margin-top: 8px; text-align: center; }
+
+@media (max-width: 560px) {
+  .brand h1 { font-size: 1.25rem; }
+  .wallet-area { align-items: flex-start; }
+  .card { padding: 16px; }
+}

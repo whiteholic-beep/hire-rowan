@@ -1,0 +1,9 @@
+{
+  "network": "bscMainnet",
+  "chainId": 56,
+  "deployer": "0xBED2e63e427f1A5557A9A9d4Dd2FA98C9CE97E89",
+  "paymentToken": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+  "agentIdRegistry": "0x60b9262456de011f7d15a54cdd8c48baaa8b022f",
+  "escrow": "0x0DAed7A5Cb2DA406D184E735e92f59d49982852E",
+  "deployedAt": "2026-11-21T01:34:41.337Z"
+}
